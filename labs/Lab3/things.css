@@ -1,38 +1,57 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #cff0f7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('PW_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
 .underline {
     text-decoration: underline;
-    color: #924027;
+    color: #2c3e50;
 }
 
 .header {
     text-align: center;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    width: 60%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-pic-container {
     margin-bottom: 20px;
-    background-color: #23e7dd;
-    padding: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2c3e50;
 }
 
 .header h1 {
-    color: #c52b2b;
-    font-size: 24px;
-    margin-bottom: 5px;
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
     gap: 20px;
-    font-size: 0.95em;
-    color: hsl(0, 0%, 0%);
+    font-size: 1em;
+    color: #34495e;
 }
 
 .navbar {
-  background-color: #333;
+  background-color: #2c3e50;
   overflow: hidden;
   width: 100%;
 }
@@ -48,8 +67,8 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #981616;
-  color: rgb(245, 245, 245);
+  background-color: #34495e;
+  color: #ecf0f1;
 }
 
 .dropdown {
@@ -72,7 +91,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #444;
+  background-color: #34495e;
   min-width: 160px;
   z-index: 1;
 }
