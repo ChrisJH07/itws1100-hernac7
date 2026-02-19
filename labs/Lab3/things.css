@@ -16,7 +16,7 @@ body {
 
 .header {
     text-align: center;
-    margin: 50px auto;
+    margin: 50px auto 20px auto;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 40px;
     width: 60%;
@@ -48,6 +48,41 @@ body {
     gap: 20px;
     font-size: 1em;
     color: #34495e;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.info-box {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #000000;
+    padding: 30px;
+    width: 60%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.info-box h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skills-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin: 10px 0;
+    font-size: 1.1em;
 }
 
 .navbar {
