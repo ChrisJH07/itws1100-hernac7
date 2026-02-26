@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="rss.css"?>
+<rss version="2.0">
+<channel>
+    <title>Christopher Hernandez - ITWS Labs</title>
+    <description>lab assignments and updates.</description>
+    <link>https://github.com/ChrisJH07/itws1100-hernac7</link>
+
+    <item>
+        <title>Lab 4: RSS Feed</title>
+        <description>Creating an RSS feed.</description>
+        <link>http://127.0.0.1:3000/lab4/rss.xml</link>
+        <guid isPermaLink="true">http://127.0.0.1:3000/lab4/rss.xml</guid>
+        
+    </item>
+
+    <item>
+        <title>Lab 3: Starting personal Website</title>
+        <description></description>
+        <link>https://github.com/ChrisJH07/itws1100-hernac7/tree/Lab3</link>
+        <guid isPermaLink="true">https://github.com/ChrisJH07/itws1100-hernac7/tree/Lab3</guid>
+
+    </item>
+
+    <item>
+        <title>Lab 2: Resume</title>
+        <description>Built a digital resume using HTML and CSS.</description>
+        <link>../Resume/index.html</link>
+        <guid isPermaLink="true">../Resume/index.html</guid>
+    </item>
+
+    <item>
+        <title>Lab 1: Setting Up</title>
+        <description>Initial setup and basic website structure.</description>
+        <link>http://127.0.0.1:3000/Lab%201/index.html</link>
+        <guid isPermaLink="true">http://127.0.0.1:3000/Lab%201/index.html</guid>
+
+    </item>
+
+</channel>
+</rss>
