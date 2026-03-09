@@ -17,13 +17,34 @@
       <p>
         We'll manually add HTML and JavaScript below here.  
       </p>
+
+      
       
       <p>
         <!-- An example script declaration: -->
         <script type="text/javascript">
-          // embedded JavaScript will be placed between these script tags.
+          document.write(firstName + " is " + age)
+
         </script>
       </p>
+
+      <script type="text/javascript">
+    if (age < insuranceCutOffAge) {
+      document.write(firstName + " can be insured");
+    } else {
+      document.write(firstName + " is too old for this insurance");
+    }
+
+    
+</script>
+
+  <button type="button" onclick="alert(firstName);">Who's there?</button>
+  <button type="button" onclick="window.location = 'http://www.rpi.edu';">Go to RPI</button>
+  <button type="button" onclick="changeOutput();">Update Output Div</button>
+  <button type="button" onclick="changeFirstParagraph();">change first paragraph</button>
+
+  <label for="fname">First name:</label>
+  <input type="text" name="fname" id="fname" onchange="alert(this.value)"/>
       
     </div>
     <!-- Slide 26 -->

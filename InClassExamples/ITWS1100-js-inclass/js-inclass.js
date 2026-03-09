@@ -12,11 +12,23 @@ function example() {
   alert(example);
 }
 
+
 function example2() {
   // variables declared inside a function are local to that function (scope)
   var example = "A different example.";
   alert(example);
 }
+
+function changeOutput() {
+  var element = document.getElementById("output");
+  element.innerHTML = "Some new text.";
+}
+
+function changeFirstParagraph(){
+  var element = document.getElementsByTagName("p")
+  element[0].innerHTML = "some new text."
+}
+
 
 
             // slide 27 - form
