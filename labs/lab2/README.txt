@@ -1,5 +1,6 @@
 Christopher Hernandez
 
+<<<<<<< Updated upstream
 Lab 2 – HTML Resume Project
 
 For Lab 2 in my ITWS class, 
@@ -11,3 +12,5 @@ I learned by trying things out, fixing mistakes, and seeing my code actually tur
 
 
 
+=======
+>>>>>>> Stashed changes
