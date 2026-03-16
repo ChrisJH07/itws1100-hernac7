@@ -32,3 +32,8 @@ fieldset {
 #save {
    float: right;
 }
+
+/* Crime 4 Fix */
+input:focus, textarea:focus {
+   background-color: #fee;
+}
