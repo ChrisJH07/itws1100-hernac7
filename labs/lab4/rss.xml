@@ -7,6 +7,15 @@
     <link>https://github.com/ChrisJH07/itws1100-hernac7</link>
 
     <item>
+        <title>Lab 5: JavaScript</title>
+        <description>Learning to use JavaScript</description>
+        <link>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab5/lab5.html</link>
+        <guid isPermaLink="true">http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab5/lab5.html</guid>
+        
+    </item>
+
+
+    <item>
         <title>Lab 4: RSS Feed</title>
         <description>Creating an RSS feed.</description>
         <link>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml</link>
