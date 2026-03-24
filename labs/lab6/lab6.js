@@ -5,8 +5,6 @@
 // is fully loaded:
 $(document).ready(function () {
 
-   alert("The DOM is now loaded and can be manipulated.");
-   alert("The instructions for this lab are in the lab6.js file.");
 
    // example event handler:
    $('#labButton').click(function () {
@@ -21,6 +19,15 @@ $(document).ready(function () {
    //change the color to be something other than blue or black
    //change the text size to 200% of normal
    // (note that there is already a class defined for the area where your name should go)
+   $('h1').click(function ()  {
+      $('.myName').text('Christopher Hernandez');
+      $('.myName').css({ 
+         'font-variable': 'small-caps',
+         'color': 'green',
+         'font-size': '200%'
+      });
+   });
+
 
 
 
@@ -29,13 +36,38 @@ $(document).ready(function () {
    //   vanish over a 2 sec duration when a user clicks "Hide text";
    //   make it appear with a 3.3 second duration when a user clicks "Show text":
 
+   $('#hideText').click(function (e) {
+      $('#showHideBlock p').hide(2000);
+   });
+
+   $('#showText').click(function (e) {
+      $('#showHideBlock p').show(3300);
+   });
+
 
    // Problem 3 (10 pts): When a normal list item is clicked, make it turn red using addClass.
    //            When a red list item is clicked change it back (you need to look up the appropriate jQuery method to do this)
    // (Note that there already is a css style named ".red" in lab6.css)
+   $('#labList').on('click', 'li', function () {
+      if ($(this).hasClass('red')) {
+         $(this).removeClass('red');
+      } else {
+         $(this).addClass('red');
+      }
+   });
 
+   
 
    // Problem 4 (10 pts): When a user clicks on the "Add a list item" button, add a new list item to the end of the list.
+
+   $('#AddListItem').click(function () {
+      var count = $('#labList').children().length + 1;
+      $('#labList').append('<li>List item ' + count + '</li>');
+   });
+
+
+
+
 
    // Problem 5 (10 pts) - what happens when you click on the new li?  Why? (Explain in your readme file)
    //   ie if it works as after #3 above, why? if it doesn't, why not?  How would you fix it?
@@ -47,6 +79,10 @@ $(document).ready(function () {
 
    // Problem 5 (10 pts): lookup another jquery method and use this code on the "Toggle Text"
    // link to show/hide the text:
+
+   $('#toggleText').click(function(e) {
+      $('#showHideBlock p').toggle(1000);
+   })
 
    // Problems: 50 pts
    // Validity: 10 pts
