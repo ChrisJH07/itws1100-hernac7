@@ -1,0 +1,36 @@
+/* Lab 6 Landing Page */
+
+.landing-card {
+  width: 60%;
+  margin: 60px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.landing-card h1 {
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.landing-card p {
+  color: #34495e;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.landing-card a {
+  color: #2c3e50;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 2px;
+}
+
+.landing-card a:hover {
+  color: #34495e;
+  border-color: #34495e;
+}
