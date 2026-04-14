@@ -1,0 +1,115 @@
+.page-content {
+    width: 60%;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.page-content h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.page-content p {
+    color: #34495e;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+
+#projectsOutput .ui-accordion-header {
+    background: #2c3e50;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 4px;
+    font-size: 1em;
+    padding: 12px 16px;
+}
+
+#projectsOutput .ui-accordion-header:hover,
+#projectsOutput .ui-accordion-header-active {
+    background: #34495e;
+}
+
+
+#projectsOutput .ui-accordion-header .ui-icon {
+    filter: invert(1);
+}
+
+
+#projectsOutput .ui-accordion-content {
+    border: 1px solid #dce1e7;
+    border-radius: 0 0 6px 6px;
+    padding: 16px 18px;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+#projectsOutput .ui-accordion-content a {
+    color: #2c3e50;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#projectsOutput .ui-accordion-content a:hover {
+    color: #34495e;
+}
+
+/* rss preview section */
+#rssPreview {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 2px solid #dce1e7;
+}
+
+#rssPreview h2 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+.rss-subtext {
+    color: #34495e;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+
+.rss-card {
+    background-color: #ffffff;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+}
+
+.rss-card strong {
+    display: block;
+    color: #2c3e50;
+    font-size: 1.05em;
+    margin-bottom: 6px;
+}
+
+.rss-card p {
+    color: #34495e;
+    margin: 4px 0 10px;
+    font-size: 0.95em;
+}
+
+.rss-card a {
+    color: #3498db;
+    font-family: monospace;
+    font-size: 0.85em;
+    word-break: break-all;
+    text-decoration: underline;
+}
+
+.rss-card a:hover {
+    color: #2c3e50;
+}
