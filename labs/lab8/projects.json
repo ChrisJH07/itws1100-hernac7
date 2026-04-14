@@ -1,0 +1,58 @@
+{
+   "feedInfo": {
+      "title": "Christopher Hernandez - ITWS Labs",
+      "description": "lab assignments and updates.",
+      "link": "https://github.com/ChrisJH07/itws1100-hernac7"
+   },
+   "menuItem": [
+      {
+         "lab": "Lab 8",
+         "title": "JavaScript JSON and AJAX",
+         "desc": "Made a dynamic projects page using JSON and AJAX",
+         "href": "projects.html",
+         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab8/projects.html"
+      },
+      {
+         "lab": "Lab 6",
+         "title": "jQuery",
+         "desc": "Used jQuery to add effects to my website",
+         "href": "../lab6/lab6_lp.html",
+         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab6/lab6.html"
+      },
+      {
+         "lab": "Lab 5",
+         "title": "JavaScript",
+         "desc": "Learned how to use JavaScript on a webpage",
+         "href": "../lab5/lab5.html",
+         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab5/lab5.html"
+      },
+      {
+         "lab": "Lab 4",
+         "title": "RSS Feed",
+         "desc": "Created an RSS feed using XML",
+         "href": "../lab4/rss.xml",
+         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml"
+      },
+      {
+         "lab": "Lab 3",
+         "title": "Personal Website",
+         "desc": "Started building my personal website",
+         "href": "../lab3/web.html",
+         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/Lab3/web.html"
+      },
+      {
+         "lab": "Lab 2",
+         "title": "Resume",
+         "desc": "Built a resume page with HTML and CSS",
+         "href": "../lab2/index.html",
+         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab2/"
+      },
+      {
+         "lab": "Lab 1",
+         "title": "Setting Up",
+         "desc": "Set up my development environment and git repo",
+         "href": "../lab1/index.html",
+         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab1/"
+      }
+   ]
+}
