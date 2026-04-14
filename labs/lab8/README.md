@@ -9,8 +9,8 @@ ITWS 1100
 - Used JSON file to generates an RSS feed.
 
 
-- Homepage: 
-- Lab 8 page: 
+- Homepage: http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/web.html
+- Lab 8 page: http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab8/projects.html
 - GitHub repo: https://github.com/ChrisJH07/itws1100-hernac7
 
 
