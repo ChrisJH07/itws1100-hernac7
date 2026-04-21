@@ -15,7 +15,6 @@ VALUES (1, "Elizabeth", "1998"),
    (5, "Up in the Air", "2009");
 
 -- create table for actors
--- NOTE: field is first_names (plural) to match index.php
 CREATE TABLE `actors` (
    `actorid` int(10) unsigned NOT NULL AUTO_INCREMENT,
    `first_names` varchar(100) NOT NULL,
@@ -24,7 +23,7 @@ CREATE TABLE `actors` (
    PRIMARY KEY (`actorid`)
 );
 
--- insert actors into table (at least 5, at least 3 born before 1960)
+-- insert actors into table 
 INSERT INTO `actors` (`first_names`, `last_name`, `dob`) VALUES 
    ('Tom', 'Hanks', '1970-01-23'),
    ('Leonardo', 'DiCaprio', '1950-02-28'), 
