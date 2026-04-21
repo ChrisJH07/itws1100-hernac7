@@ -27,8 +27,8 @@ if ($db->connect_error) {
 if ($dbOk) {
    $query = 'SELECT m.movieid, m.title, m.year, a.first_names, a.last_name
              FROM movies m
-             LEFT JOIN movie_actors ma ON m.movieid = ma.movie_id
-             LEFT JOIN actors a ON a.actorid = ma.actor_id
+             LEFT JOIN movie_actors ma ON m.movieid = ma.movieid
+             LEFT JOIN actors a ON ma.actorid = a.actorid
              ORDER BY m.title, a.last_name';
 
    $result = $db->query($query);

@@ -1,13 +1,10 @@
 <?php
-include('includes/init.inc.php'); // include the DOCTYPE and opening tags
-include('includes/functions.inc.php'); // functions
+include('includes/init.inc.php');
+include('includes/functions.inc.php');
 ?>
 <title>PHP &amp; MySQL - ITWS</title>
 
-<?php
-include('includes/head.inc.php');
-// include global css, javascript, end the head and open the body
-?>
+<?php include('includes/head.inc.php'); ?>
 
 <h1>PHP &amp; MySQL</h1>
 
@@ -26,10 +23,9 @@ if ($db->connect_error) {
 }
 
 $havePost = isset($_POST["save"]);
-
 $errors = '';
-if ($havePost) {
 
+if ($havePost) {
    $title = htmlspecialchars(trim($_POST["title"]));
    $year  = htmlspecialchars(trim($_POST["year"]));
 
@@ -84,7 +80,7 @@ if ($havePost) {
          <label class="field" for="title">Title:</label>
          <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') { echo $title; } ?>" name="title" id="title" /></div>
 
-         <label class="field" for="year">Year of release:</label>
+         <label class="field" for="year">Year:</label>
          <div class="value"><input type="text" size="4" maxlength="4" value="<?php if ($havePost && $errors != '') { echo $year; } ?>" name="year" id="year" /> <em>yyyy</em></div>
 
          <input type="submit" value="save" id="save" name="save" />
@@ -96,7 +92,6 @@ if ($havePost) {
 <table id="movieTable">
    <?php
    if ($dbOk) {
-
       $query = 'select * from movies order by title';
       $result = $db->query($query);
 
@@ -105,7 +100,7 @@ if ($havePost) {
       } else {
          $numRecords = $result->num_rows;
 
-         echo '<tr><th>Title:</th><th>Year of Release:</th><th></th></tr>';
+         echo '<tr><th>Title:</th><th>Year:</th><th></th></tr>';
          for ($i = 0; $i < $numRecords; $i++) {
             $record = $result->fetch_assoc();
             if ($i % 2 == 0) {
@@ -120,7 +115,6 @@ if ($havePost) {
             echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/>';
             echo '</td></tr>';
          }
-
          $result->free();
       }
       $db->close();
@@ -182,7 +176,6 @@ $(document).ready(function() {
          });
       }
    });
-
 });
 </script>
 
