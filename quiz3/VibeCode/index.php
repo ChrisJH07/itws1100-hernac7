@@ -6,7 +6,7 @@
   <title>Soccer Trivia Quiz</title>
 
   <!-- Reuse the existing site stylesheet -->
-  <link rel="stylesheet" href="../lab3/things.css">
+  <link rel="stylesheet" href="things.css">
 
   <style>
     /* ── Quiz layout ── */
