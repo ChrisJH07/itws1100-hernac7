@@ -1,9 +1,8 @@
 <?php
-// Database credentials — update these to match your Azure MySQL setup
 $host = "localhost";
 $user = "hernac7";
-$pass = "FluffyPlushie2381!";
-$db   = "iit";
+$pass = "FluffyPlushie2381";
+$db   = "hernac7db";
 
 $conn = new mysqli($host, $user, $pass, $db);
 

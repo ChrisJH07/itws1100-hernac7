@@ -1,100 +1,98 @@
-# Prompt Log — Soccer Trivia Quiz (Quiz 3, D2)
-**hernac7 | ITWS 1100**
+# Prompt Log 
 
----
+
 
 ## Prompt 1
 **Prompt:**
-> "I need to build a soccer trivia quiz for my web dev class. It needs PHP, MySQL, and jQuery. The questions should come from a database and load without a page refresh. Can you give me a basic project structure and a CREATE TABLE statement to start?"
+ "I want to build a soccer trivia quiz for my web dev class. It needs to use PHP and MySQL for the backend and jQuery on the front end. Questions need to come from a database and load without refreshing the page. What files do I need and what should the database table look like?"
 
 **What it returned:**
-Gave me a folder structure and a CREATE TABLE with columns for the question, four options, and the correct answer stored as a single letter (A/B/C/D). Also outlined which files I'd need.
+Suggested a folder structure with separate files for the DB connection, a JSON endpoint, and the main page. Gave me a CREATE TABLE with columns for the question text, four answer options, the correct answer, and a difficulty level.
 
-**What I kept/changed/threw away:**
-Kept the table structure — storing the correct answer as a CHAR(1) letter instead of the full text was smart, easier to check on the client side. Added a `difficulty` column myself because I thought it might be useful later for filtering. Threw away the suggested `quiz_results` table for now since I wanted to get the core quiz working first.
+**What I kept / changed / threw away:**
+Kept the overall file structure — splitting db.php out made sense since both questions.php and save-score.php need the connection. Kept storing the correct answer as a single letter  because that made the JavaScript comparison really simple. Added the difficulty ENUM column myself . Threw away a separate `quiz_results` table it suggested at first, 
 
----
+
 
 ## Prompt 2
 **Prompt:**
-> "Write the db.php connection file and a questions.php endpoint that returns 8 random questions as JSON."
+ "Write db.php. It should connect to MySQL using mysqli and stop the script if the connection fails."
 
 **What it returned:**
-Returned both files. questions.php used `ORDER BY RAND() LIMIT 8` and json_encoded the result array.
+Short file, connected with `new mysqli(...)` and checked `$conn->connect_error`. If it failed it echoed the actual error and exited.
 
-**What I kept/changed/threw away:**
-Kept most of it. Changed the error handling in db.php — the original version was echoing `$conn->connect_error` directly to the page, which would have exposed my database credentials if something went wrong. Replaced that with a generic error message. That's something we covered in class.
+**What I kept / changed / threw away:**
+Kept the structure but changed the error output. The original was printing `$conn->connect_error` directly to the page — that would expose the database host and credentials to anyone who triggered a connection failure. Changed it to a generic "Could not connect" message .
 
 ---
 
 ## Prompt 3
 **Prompt:**
-> "Now write the main index.php page. It should have a Start button, load questions via AJAX when clicked, and display them one at a time with four answer buttons."
+"Write questions.php. It should connect to the database, grab 8 random questions, and return them as JSON."
 
 **What it returned:**
-Generated a full HTML/PHP page with jQuery and the quiz logic inline. The structure was correct — start screen, question screen, result screen — and the AJAX call to questions.php worked.
+Used `ORDER BY RAND() LIMIT 8`, looped through with `fetch_assoc()`, built an array, and `json_encode()`d it at the end.
 
-**What I kept/changed/threw away:**
-Kept the three-screen layout. Rewrote the CSS almost entirely because it looked generic and didn't match my site's existing `things.css` style at all — wrong colors, weird fonts. Added the navbar from my existing web.html so the quiz feels like part of the same site. Also changed the feedback delay from 2000ms to 1200ms because 2 seconds felt too slow.
+**What I kept / changed / threw away:**
+Kept basically all of it. The only thing I added was `header("Content-Type: application/json")` at the top — the original didn't have it and without it jQuery sometimes gets confused parsing the response. 
 
 ---
 
 ## Prompt 4
 **Prompt:**
-> "The answer buttons don't get disabled after I click one. I can click all four and rack up infinite points. Fix that."
+ "Now write the main index.php. I want a start screen with a name input, then questions show up one at a time with four buttons, and a results screen at the end. All without the page reloading."
 
 **What it returned:**
-Added `$(".option-btn").prop("disabled", true)` at the top of the handleAnswer function, which disables all buttons the moment one is clicked.
+Generated a full page with three hidden divs (start, question, result) that swap visibility with jQuery's `.show()` and `.hide()`. The AJAX call on the Start button fetched from questions.php and kicked off the quiz loop.
 
-**What I kept/changed/threw away:**
-Kept it as-is. Simple fix, exactly what I needed. This was a bug I caught by actually playing the quiz myself.
-
+**What I kept / changed / threw away:**
+Kept the three-div layout  Rewrote some CSS. Pulled in `things.css` and matched the navbar from `web.html` so it felt consistent. Changed the transition delay between questions from 2000ms to 1200ms, two full seconds was too long.
 ---
 
 ## Prompt 5
 **Prompt:**
-> "Add a save-score.php that accepts a POST request with the player's name, score, and total, and inserts it into a quiz_scores table using a prepared statement."
+"There's a bug — I can click multiple answer buttons and score extra points. After picking an answer all buttons need to lock."
 
 **What it returned:**
-Returned save-score.php with a prepared INSERT using bind_param("sii", ...) and a new CREATE TABLE for quiz_scores.
+Added `$(".option-btn").prop("disabled", true)` as the first line inside `handleAnswer()`.
 
-**What I kept/changed/threw away:**
-Kept the prepared statement exactly as written — that's the right pattern and matches what we did in Lab 9. Added the `played_at` column to the table myself using `NOW()` in the INSERT so I'd have a timestamp on each score. The original didn't include that.
+**What I kept / changed / threw away:**
+Kept it. Found this bug by actually playing the quiz. Also noticed the correct answer wasn't highlighting green when I got something wrong — the original only colored the button I clicked. Added `.addClass("correct")` on the right answer regardless so you always see what you should have picked.
 
 ---
 
 ## Prompt 6
 **Prompt:**
-> "Add a player name input on the start screen and use it in the result message. Something like 'Great job, Chris!'"
+"Add save-score.php. After the quiz ends it should POST the player name, score, and total and save it to a quiz_scores table using a prepared statement."
 
 **What it returned:**
-Added a text input before the Start button and threaded `playerName` through the state so it shows up in the result screen message.
+Returned save-score.php with `bind_param("sii", ...)` and a CREATE TABLE for quiz_scores. Added the `$.post()` call in the JavaScript result function too.
 
-**What I kept/changed/threw away:**
-Kept the logic. Changed the result messages — the ones it generated were too formal ("Excellent performance!"). Rewrote them to sound more casual. Also added a fallback to "Anonymous" if the field is left blank, which the original didn't handle.
+**What I kept / changed / threw away:**
+Kept the prepared statemen. Added `played_at` with `NOW()` , the original didn't track timestamps. Also added a method check at the top so the file can't just be opened in a browser directly.
 
 ---
 
 ## Prompt 7
 **Prompt:**
-> "Add a progress indicator like 'Question 3 of 8' and keep a live score counter visible during the quiz."
+"The result screen needs to use the player's name. Also the result messages sound too stiff, rewrite them to be more casual."
 
 **What it returned:**
-Added `#progress` and `#score-display` spans that update inside showQuestion() on each render.
+Threaded `playerName` through the state and used it in the end message. Result messages were things like "Excellent result" and "Well done."
 
-**What I kept/changed/threw away:**
-Kept both. Styled the score display to float right so it lines up opposite the progress text — the original just stacked them on top of each other which looked bad. Minor CSS tweak but it made a difference.
+**What I kept / changed / threw away:**
+Kept the name logic but rewrote every result message myself. 
 
 ---
 
 ## Prompt 8
 **Prompt:**
-> "Write a .htaccess file that password-protects this quiz3 folder. And also add the SQL for the quiz_scores table to setup.sql."
+ "The navbar at the top shows up but it has no styling — just plain text links stacked weird. Pull in the things.css stylesheet and make sure the dropdown menu works."
 
 **What it returned:**
-Generated the .htaccess with `AuthType Basic`, `AuthUserFile`, and `Require valid-user`. Also added the `quiz_scores` CREATE TABLE to setup.sql.
+Added the `<link rel="stylesheet" href="things.css">` tag in the head and copied the full navbar HTML structure from web.html including the dropdown for Labs.
 
-**What I kept/changed/threw away:**
-Kept both. Made sure the AuthUserFile path pointed outside the web root, not inside the quiz3 folder — if .htpasswd were inside a public folder, someone could just download it. That's exactly what we set up in Lab 10, so I already knew that detail.
+**What I kept / changed / threw away:**
+Kept the navbar HTML completely. Had to fix the CSS path though — the original was pointing to `../lab3/things.css`. Changed it to just `href="things.css"` since things.css was already in the same directory. After that the navbar rendered exactly like the rest of my site and the dropdown worked on hover.
 
 ---

@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Quiz 3 - Restricted"
-AuthUserFile /etc/apache2/.htpasswd_quiz3
-Require valid-user
