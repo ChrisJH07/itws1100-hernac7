@@ -1,25 +1,13 @@
-# Quiz 3 — Soccer Trivia Quiz
-**hernac7 | ITWS 1100**
+Quiz 3
+ITWS 1100
 
-## Live URL
-http://hernac7rpi.eastus.cloudapp.azure.com/iit/quiz3/index.php
+- What I built
+VibeCoded a full-stack soccer trivia quiz using PHP, MySQL, and jQuery. Questions are stored in a MySQL database and loaded dynamically via AJAX when the user clicks Start. The quiz displays 8 random questions one at a time with four answer buttons each. JavaScript handles scoring and feedback without any page reloads. Final scores are saved to the database using a prepared statement. All database queries use prepared statements to prevent SQL injection.
 
-## File Structure
-```
-quiz3/
-├── index.php         # Main quiz page (HTML + jQuery)
-├── questions.php     # AJAX endpoint — returns 8 random questions as JSON
-├── save-score.php    # AJAX endpoint — POSTs final score to DB
-├── db.php            # Database connection (credentials here)
-├── setup.sql         # CREATE TABLE statements + seed data
-├── .htaccess         # Password protection for this folder
-├── prompt-log.md     # D2 — AI prompt history
-├── break-it.md       # D4 — SQL injection and XSS exercise
-└── README.md         # This file
-```
 
-## Setup Instructions
-1. Run `setup.sql` against your MySQL database
-2. Update credentials in `db.php`
-3. Create `.htpasswd` file: `htpasswd -c /etc/apache2/.htpasswd_quiz3 hernac7`
-4. Make sure `AllowOverride All` is set in your Apache VirtualHost config
+- Homepage: http://hernac7rpi.eastus.cloudapp.azure.com/iit/quiz3/VibeCode/web.html
+- VibeCode page: http://hernac7rpi.eastus.cloudapp.azure.com/iit/quiz3/VibeCode/
+- GitHub repo: https://github.com/ChrisJH07/itws1100-hernac7
+- Discord - Chris
+
+
