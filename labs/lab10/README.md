@@ -7,6 +7,6 @@ This lab deploys the site to production with HTTPS, per-folder password protecti
 
 ## Live Site
 
-- FQDN: `https://hernac7rpi.eastus.cloudapp.azure.com`
+- FQDN: https://hernac7rpi.eastus.cloudapp.azure.com
 - GitHub Repo: https://github.com/ChrisJH07/ITWS1100-hernac7
 
