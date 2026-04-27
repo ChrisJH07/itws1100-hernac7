@@ -6,53 +6,76 @@
    },
    "menuItem": [
       {
+         "lab": "Lab 10",
+         "title": "Production Deployment",
+         "desc": "Deployed site to production with HTTPS, per-folder password protection, and GitHub webhook auto-deploy",
+         "href": "../lab10/index.html",
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab10/",
+         "secure": false
+      },
+      {
+         "lab": "Lab 9",
+         "title": "Databases and SQL",
+         "desc": "Built a PHP and MySQL app to add, display, and delete movies with actor relationships",
+         "href": "../lab9/inclassexample/index.php",
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab9/inclassexample/index.php",
+         "secure": true
+      },
+      {
          "lab": "Lab 8",
          "title": "JavaScript JSON and AJAX",
          "desc": "Made a dynamic projects page using JSON and AJAX",
          "href": "projects.html",
-         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab8/projects.html"
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab8/projects.html",
+         "secure": false
       },
       {
          "lab": "Lab 6",
          "title": "jQuery",
          "desc": "Used jQuery to add effects to my website",
          "href": "../lab6/lab6_lp.html",
-         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab6/lab6.html"
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab6/lab6.html",
+         "secure": false
       },
       {
          "lab": "Lab 5",
          "title": "JavaScript",
          "desc": "Learned how to use JavaScript on a webpage",
          "href": "../lab5/lab5.html",
-         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab5/lab5.html"
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab5/lab5.html",
+         "secure": false
       },
       {
          "lab": "Lab 4",
          "title": "RSS Feed",
          "desc": "Created an RSS feed using XML",
          "href": "../lab4/rss.xml",
-         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml"
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml",
+         "secure": false
       },
       {
          "lab": "Lab 3",
          "title": "Personal Website",
          "desc": "Started building my personal website",
          "href": "../lab3/web.html",
-         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/Lab3/web.html"
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/Lab3/web.html",
+         "secure": false
       },
       {
          "lab": "Lab 2",
          "title": "Resume",
          "desc": "Built a resume page with HTML and CSS",
          "href": "../lab2/index.html",
-         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab2/"
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab2/",
+         "secure": false
       },
       {
          "lab": "Lab 1",
          "title": "Setting Up",
          "desc": "Set up my development environment and git repo",
          "href": "../lab1/index.html",
-         "liveLink": "http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab1/"
+         "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab1/",
+         "secure": true
       }
    ]
 }

@@ -11,10 +11,15 @@ $(document).ready(function() {
          // build the accordion html by looping through each menu item
          var output = "";
          $.each(data.menuItem, function(i, item) {
-            output += "<h3>" + item.lab + " - " + item.title + "</h3>";
+            var lockIcon = item.secure ? ' &#x1F512;' : '';
+            output += "<h3>" + item.lab + " - " + item.title + lockIcon + "</h3>";
             output += "<div>";
             output += "<p>" + item.desc + "</p>";
-            output += "<a href='" + item.href + "'>Go to " + item.lab + "</a>";
+            output += "<a href='" + item.href + "'";
+            if (item.secure) {
+               output += " title='Password required'";
+            }
+            output += ">Go to " + item.lab + "</a>";
             output += "</div>";
          });
 
@@ -46,8 +51,9 @@ function buildRSS(data) {
    output += "<p class='rss-subtext'>RSS Feed using json</p>";
 
    $.each(data.menuItem, function(i, item) {
+      var lockIcon = item.secure ? ' &#x1F512;' : '';
       output += "<div class='rss-card'>";
-      output += "<strong>" + item.lab + ": " + item.title + "</strong>";
+      output += "<strong>" + item.lab + ": " + item.title + lockIcon + "</strong>";
       output += "<p>" + item.desc + "</p>";
       output += "<a href='" + item.liveLink + "' target='_blank'>" + item.liveLink + "</a>";
       output += "</div>";
