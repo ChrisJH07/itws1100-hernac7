@@ -3,10 +3,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Christopher Hernandez - ITWS Labs</title>
     <subtitle>lab assignments and updates.</subtitle>
-    <link href="http://hernac7rpi.eastus.cloudapp.azure.com//iit/labs/lab4/atom.xml" rel="self"/>
+    <link href="http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/atom.xml" rel="self"/>
     <link href="https://github.com/ChrisJH07/itws1100-hernac7"/>
-    <id>http://hernac7rpi.eastus.cloudapp.azure.com//iit/labs/lab4/atom.xml</id>
-    <updated>2024-12-15T00:00:00Z</updated>
+    <id>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/atom.xml</id>
     <author>
         <name>Christopher Hernandez</name>
         <email>hernac7@rpi.edu</email>
@@ -16,7 +15,6 @@
         <title>Lab 6: jQuery</title>
         <link href="http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab6/lab6.html"/>
         <id>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab6/lab6.html</id>
-        <updated>2024-11-15T00:00:00Z</updated>
         <summary>Learning to use jQuery</summary>
     </entry>
 
@@ -24,7 +22,6 @@
         <title>Lab 5: JavaScript</title>
         <link href="http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab5/lab5.html"/>
         <id>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab5/lab5.html</id>
-        <updated>2024-11-01T00:00:00Z</updated>
         <summary>Learning to use JavaScript</summary>
     </entry>
 
@@ -32,7 +29,6 @@
         <title>Lab 4: RSS Feed</title>
         <link href="http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml"/>
         <id>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab4/rss.xml</id>
-        <updated>2024-10-15T00:00:00Z</updated>
         <summary>Creating an RSS feed.</summary>
     </entry>
 
@@ -40,7 +36,6 @@
         <title>Lab 3: Starting personal Website</title>
         <link href="http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/Lab3/web.html"/>
         <id>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/Lab3/web.html</id>
-        <updated>2024-10-01T00:00:00Z</updated>
         <summary>Starting personal Website</summary>
     </entry>
 
@@ -48,7 +43,6 @@
         <title>Lab 2: Resume</title>
         <link href="http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab2/"/>
         <id>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab2/</id>
-        <updated>2024-09-15T00:00:00Z</updated>
         <summary>Built a digital resume using HTML and CSS.</summary>
     </entry>
 
@@ -56,7 +50,6 @@
         <title>Lab 1: Setting Up</title>
         <link href="http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab1/"/>
         <id>http://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab1/</id>
-        <updated>2024-09-01T00:00:00Z</updated>
         <summary>Initial setup and basic website structure.</summary>
     </entry>
 
