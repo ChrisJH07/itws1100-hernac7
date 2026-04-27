@@ -41,7 +41,7 @@
          "lab": "Lab 5",
          "title": "JavaScript",
          "desc": "Learned how to use JavaScript on a webpage",
-         "href": "../lab5/lab5.html",
+         "href": "../lab5/index.html",
          "liveLink": "https://hernac7rpi.eastus.cloudapp.azure.com/iit/labs/lab5/lab5.html",
          "secure": false
       },
